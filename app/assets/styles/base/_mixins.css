@@ -6,12 +6,20 @@
 
 @define-mixin atMedium {
     @media (min-width: 800px) {
-        @mixin-content
+        @mixin-content;
     }
 }
 
 @define-mixin atLarge {
     @media (min-width: 1200px) {
-        @mixin-content
+        @mixin-content;
+    }
+}
+
+@define-mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 }
